@@ -1,0 +1,8 @@
+{
+	"port": 9001,
+	"name": "Hello World",
+	"commands": {
+		"main": './server.sh %p %d'
+	},
+	"subdomain": "hello"
+}
