@@ -11,7 +11,7 @@ die () {
 echo >&2 "$@"
 exit 1
 }
-[ "$#" -eq 1 ] || die "Port required as first argument"
+[ "$#" -ge 1 ] || die "Port required as first argument"
 echo $1 | grep -E -q '^[0-9]+$' || die "Numeric port required, \"$1\" provided"
 
 # Run nc to listen to incoming connections on the given port
@@ -39,13 +39,13 @@ while true ; do
 
 	# Output the response with the relevant headers
 	cat >$RESP <<EOF
-	HTTP/1.0 $status
-	Content-Type: text/plain
-	Server: lucos_helloworld
-	Connection: Close
-	Content-Length: ${#body}
+HTTP/1.0 $status
+Content-Type: text/plain
+Server: lucos_helloworld
+Connection: Close
+Content-Length: ${#body}
 
-	$body
-	EOF
+$body
+EOF
 )
 done
