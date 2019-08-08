@@ -1,4 +1,4 @@
-#lucos Hello World
+# lucos Hello World
 
 
 This is a simple web service written in bash.  It is not meant to provide any meaningful functionality, instead it serves as an example of a basic lucos service.  It can also be used for testing other parts of lucos infrastructure.
@@ -6,3 +6,6 @@ This is a simple web service written in bash.  It is not meant to provide any me
 ## Running
 
 This should be run inside lucos_services.  Like other services, it can be run standalone, but there's really not much point in that.
+
+## Deprecation
+This style of application configuration was only used lucos version 2, which has now been decomissioned.
